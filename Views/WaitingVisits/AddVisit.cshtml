@@ -1,0 +1,63 @@
+﻿@model WebApplication5.Models.DB.WaitingVisits
+@{
+    ViewBag.Title = "Umów wizytę";
+}
+
+<div class="container">
+    <div class="header">
+        <h2>Umów wizytę</h2>
+    </div>
+
+    <form id="form" class="form" method="post">
+
+        <div class="form-control">
+            <label>Imię i nazwisko *</label>
+            @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @type = "text", @class = "form-control", @placeholder = "Imię i nazwisko", @id = "name" } })
+            @Html.ValidationMessageFor(m => m.Name, "", new { @class = "text-danger" })
+            <small>Error message</small>
+        </div>
+
+        <div class="form-control">
+            <label>Email *</label>
+            @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @type = "email", @placeholder = "email", @id = "email", @class = "form-control" } })
+            @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+            <small>Error message</small>
+        </div>
+
+        <div class="form-control">
+            <label>Numer telefonu *</label>
+            @Html.EditorFor(model => model.Phone, new { htmlAttributes = new { @type = "text", @placeholder = "XXX XXX XXX", @id = "phonenumber", @class = "form-control" } })
+            @Html.ValidationMessageFor(m => m.Phone, "", new { @class = "text-danger" })
+            <small>Error message</small>
+        </div>
+
+        <div class="form-control">
+            <label>Uwagi</label>
+            @Html.EditorFor(model => model.Note, new { htmlAttributes = new { @type = "text", @class = "form-control", @placeholder = "Uwagi dotyczące wizyty", @id = "uwagi" } })
+            @Html.ValidationMessageFor(m => m.Note, "", new { @class = "text-danger" })
+            <small>Error message</small>
+        </div>
+
+        <div class="form-control">
+            <label>Wybierz termin *</label>
+            @Html.EditorFor(model => model.Data, new { htmlAttributes = new { @type = "date", @class = "form-control input-sm", @id = "data" } })
+            @Html.ValidationMessageFor(m => m.Data, "", new { @class = "text-danger" })
+            <small>Error message</small>
+        </div>
+
+        <div class="form-control">
+            <label>Wybierz godzinę *</label>
+            @Html.EditorFor(model => model.Hour, new { htmlAttributes = new { @type = "time", @id = "time", @min = "09:00", @max = "18:00", @step = "900" } })
+            @Html.ValidationMessageFor(m => m.Hour, "", new { @class = "text-danger" })
+            <small>Error message</small>
+        </div>
+
+        <button type="submit" class="btn btn-secondary" >Wyślij</button>
+        
+    </form>
+
+</div>
+
+
+
+
