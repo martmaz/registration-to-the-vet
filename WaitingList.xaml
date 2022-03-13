@@ -1,0 +1,62 @@
+﻿<Window x:Class="WpfAppScheduler.WaitingList"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAppScheduler"
+        mc:Ignorable="d"
+        Title="Lista oczekujących" Height="459.231" Width="837.72" Background="#FFEEFFE9" MinWidth="837" MinHeight="460">
+    
+    <Grid Margin="0,0,2,1">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="378*"/>
+            <ColumnDefinition Width="85*"/>
+        </Grid.ColumnDefinitions>
+
+        <ListView Name="ListViewWaiting" Margin="10" ItemsSource="{Binding Path=WaitingVisits}" BorderBrush="#FF82908A">
+            <ListView.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="#FFF7F9E5" Offset="0"/>
+                </LinearGradientBrush>
+            </ListView.Background>
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Nazwisko" DisplayMemberBinding="{Binding Path=Name}"/>
+                    <GridViewColumn Header="Email" DisplayMemberBinding="{Binding Path=Email}"/>
+                    <GridViewColumn Header="Telefon" DisplayMemberBinding="{Binding Path=Phone}"/>
+                    <GridViewColumn Header="Uwagi" DisplayMemberBinding="{Binding Path=Note}"/>
+                    <GridViewColumn Header="Data" DisplayMemberBinding="{Binding Path=Data}"/>
+                    <GridViewColumn Header="Godzina" DisplayMemberBinding="{Binding Path=Hour}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <Button Content="Zaakceptuj" Margin="10,10,10,0" Height="34" Grid.Column="1" VerticalAlignment="Top" Click="ButtonAccept_Click" BorderBrush="#FFB2B2B2" Foreground="#FF363636" >
+            <Button.Effect>
+                <DropShadowEffect ShadowDepth="2" Color="#FFB9B9B9" Opacity="0.8"/>
+            </Button.Effect>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.5"/>
+                    <GradientStop Color="#FFDDDDDD" Offset="0.5"/>
+                    <GradientStop Color="#FFFDFDFD" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button Content="Odrzuć" Margin="10,60,10,0" Height="34" Grid.Column="1" VerticalAlignment="Top" Click="ButtonRefuse_Click" BorderBrush="#FFB2B2B2" Foreground="#FF363636" >
+            <Button.Effect>
+                <DropShadowEffect ShadowDepth="2" Color="#FFB9B9B9" Opacity="0.8"/>
+            </Button.Effect>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.5"/>
+                    <GradientStop Color="#FFDDDDDD" Offset="0.5"/>
+                    <GradientStop Color="#FFFDFDFD" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+
+    </Grid>
+</Window>

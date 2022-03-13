@@ -1,0 +1,122 @@
+﻿<Window x:Class="WpfAppScheduler.Day"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAppScheduler"
+        mc:Ignorable="d"
+        Title="Day" Height="450" Width="706.212">
+    <Grid>
+        <Label Content="Name" HorizontalAlignment="Left" Margin="409,68,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="name" HorizontalAlignment="Left" Height="23" Margin="464,71,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200"/>
+        <Label Content="Phone" HorizontalAlignment="Left" Margin="409,108,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="phone" HorizontalAlignment="Left" Height="23" Margin="464,111,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200"/>
+        <Label Content="Email" HorizontalAlignment="Left" Margin="409,148,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="email" HorizontalAlignment="Left" Height="23" Margin="464,151,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200"/>
+        <Label Content="Notes" HorizontalAlignment="Left" Margin="409,188,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="notes" HorizontalAlignment="Left" Height="23" Margin="464,191,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200"/>
+        <Label Content="Date" HorizontalAlignment="Left" Margin="409,228,0,0" VerticalAlignment="Top"/>
+        <DatePicker x:Name="dtPicker" HorizontalAlignment="Left" Margin="464,230,0,0" VerticalAlignment="Top"/>
+
+        <Label Content="Start Time" HorizontalAlignment="Left" Margin="409,268,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="from" HorizontalAlignment="Left" Margin="478,272,0,0" VerticalAlignment="Top" Width="102">
+            <ComboBoxItem>09:00</ComboBoxItem>
+            <ComboBoxItem>09:15</ComboBoxItem>
+            <ComboBoxItem>09:30</ComboBoxItem>
+            <ComboBoxItem>09.45</ComboBoxItem>
+            <ComboBoxItem>10:00</ComboBoxItem>
+            <ComboBoxItem>10:15</ComboBoxItem>
+            <ComboBoxItem>10:30</ComboBoxItem>
+            <ComboBoxItem>10.45</ComboBoxItem>
+            <ComboBoxItem>11:00</ComboBoxItem>
+            <ComboBoxItem>11:15</ComboBoxItem>
+            <ComboBoxItem>11:30</ComboBoxItem>
+            <ComboBoxItem>11.45</ComboBoxItem>
+            <ComboBoxItem>12:00</ComboBoxItem>
+            <ComboBoxItem>12:15</ComboBoxItem>
+            <ComboBoxItem>12:30</ComboBoxItem>
+            <ComboBoxItem>12.45</ComboBoxItem>
+            <ComboBoxItem>13:00</ComboBoxItem>
+            <ComboBoxItem>13:15</ComboBoxItem>
+            <ComboBoxItem>13:30</ComboBoxItem>
+            <ComboBoxItem>13.45</ComboBoxItem>
+            <ComboBoxItem>14:00</ComboBoxItem>
+            <ComboBoxItem>14:15</ComboBoxItem>
+            <ComboBoxItem>14:30</ComboBoxItem>
+            <ComboBoxItem>14.45</ComboBoxItem>
+            <ComboBoxItem>15:00</ComboBoxItem>
+            <ComboBoxItem>15:15</ComboBoxItem>
+            <ComboBoxItem>15:30</ComboBoxItem>
+            <ComboBoxItem>15.45</ComboBoxItem>
+            <ComboBoxItem>16:00</ComboBoxItem>
+            <ComboBoxItem>16:15</ComboBoxItem>
+            <ComboBoxItem>16:30</ComboBoxItem>
+            <ComboBoxItem>16.45</ComboBoxItem>
+            <ComboBoxItem>17:00</ComboBoxItem>
+            <ComboBoxItem>17:15</ComboBoxItem>
+            <ComboBoxItem>17:30</ComboBoxItem>
+            <ComboBoxItem>17.45</ComboBoxItem>
+            <ComboBoxItem>18:00</ComboBoxItem>
+            <ComboBoxItem>18:15</ComboBoxItem>
+            <ComboBoxItem>18:30</ComboBoxItem>
+            <ComboBoxItem>18.45</ComboBoxItem>
+        </ComboBox>
+
+        <Label Content="End Time" HorizontalAlignment="Left" Margin="409,308,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="to" HorizontalAlignment="Left" Margin="478,312,0,0" VerticalAlignment="Top" Width="102">
+            <ComboBoxItem>09:00</ComboBoxItem>
+            <ComboBoxItem>09:15</ComboBoxItem>
+            <ComboBoxItem>09:30</ComboBoxItem>
+            <ComboBoxItem>09.45</ComboBoxItem>
+            <ComboBoxItem>10:00</ComboBoxItem>
+            <ComboBoxItem>10:15</ComboBoxItem>
+            <ComboBoxItem>10:30</ComboBoxItem>
+            <ComboBoxItem>10.45</ComboBoxItem>
+            <ComboBoxItem>11:00</ComboBoxItem>
+            <ComboBoxItem>11:15</ComboBoxItem>
+            <ComboBoxItem>11:30</ComboBoxItem>
+            <ComboBoxItem>11.45</ComboBoxItem>
+            <ComboBoxItem>12:00</ComboBoxItem>
+            <ComboBoxItem>12:15</ComboBoxItem>
+            <ComboBoxItem>12:30</ComboBoxItem>
+            <ComboBoxItem>12.45</ComboBoxItem>
+            <ComboBoxItem>13:00</ComboBoxItem>
+            <ComboBoxItem>13:15</ComboBoxItem>
+            <ComboBoxItem>13:30</ComboBoxItem>
+            <ComboBoxItem>13.45</ComboBoxItem>
+            <ComboBoxItem>14:00</ComboBoxItem>
+            <ComboBoxItem>14:15</ComboBoxItem>
+            <ComboBoxItem>14:30</ComboBoxItem>
+            <ComboBoxItem>14.45</ComboBoxItem>
+            <ComboBoxItem>15:00</ComboBoxItem>
+            <ComboBoxItem>15:15</ComboBoxItem>
+            <ComboBoxItem>15:30</ComboBoxItem>
+            <ComboBoxItem>15.45</ComboBoxItem>
+            <ComboBoxItem>16:00</ComboBoxItem>
+            <ComboBoxItem>16:15</ComboBoxItem>
+            <ComboBoxItem>16:30</ComboBoxItem>
+            <ComboBoxItem>16.45</ComboBoxItem>
+            <ComboBoxItem>17:00</ComboBoxItem>
+            <ComboBoxItem>17:15</ComboBoxItem>
+            <ComboBoxItem>17:30</ComboBoxItem>
+            <ComboBoxItem>17.45</ComboBoxItem>
+            <ComboBoxItem>18:00</ComboBoxItem>
+            <ComboBoxItem>18:15</ComboBoxItem>
+            <ComboBoxItem>18:30</ComboBoxItem>
+            <ComboBoxItem>18.45</ComboBoxItem>
+
+        </ComboBox>
+        <Label x:Name="dayDate" Content="" Margin="117,21,461,0" Height="26" VerticalAlignment="Top"/>
+        <Button x:Name="prevBtn" Margin="24,21,0,373" HorizontalAlignment="Left" Content="Prev"  VerticalAlignment="Center" Height="22" Width="29" Click="prevBtn_Click" />
+        <Button x:Name="nextBtn" Margin="293,21,0,373" HorizontalAlignment="Left" Content="Next"  VerticalAlignment="Center" Height="22" Width="31" Click="nextBtn_Click" />
+        <ListView HorizontalAlignment="Left" Height="327" Margin="24,68,0,0" VerticalAlignment="Top" Width="340" >
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button Content="Save" HorizontalAlignment="Left" Margin="594,367,0,0" VerticalAlignment="Top" Width="70" Height="28" />
+        <Button Content="Delete" HorizontalAlignment="Left" Margin="390,367,0,0" VerticalAlignment="Top" Width="70" Height="28" />
+    </Grid>
+</Window>
